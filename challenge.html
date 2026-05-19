@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Bootstrap App</title>
+    <link href="challenge_files/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .easy {
+        background-color: #A1EEBD !important;
+      }
+
+      .medium {
+        background-color: #F6F7C4 !important;
+      }
+
+      .hard {
+        background-color: #F6D6D6 !important;
+      }
+
+      .background-filter::after {
+        -webkit-backdrop-filter: blur(4px); /* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
+        backdrop-filter: blur(4px); /* Supported in all major browsers */
+
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%; height: 100%;
+        top: 0;
+      }
+
+      .background-filter {
+        position: relative;
+      }
+      .background {
+        background: url(/static/images/bg.878030f6cfe1.jpg);
+        background-position: center top;
+        background-size: 100% auto;
+        <!-- backdrop-filter: blur(10px); -->
+      }
+      .u-non-blurred {
+        position: relative;
+        z-index: 1;
+
+        /* For text decoration, not mandatory */
+      }
+      /* Offset for fixed navbar */
+      body {
+        min-height: 100vh;
+        padding-top: 70px;
+      }
+
+      /* Central container: Full screen on mobile, limited on desktop */
+      .central-card {
+        min-height: calc(100vh - 70px);
+        background: white;
+        padding: 2rem;
+      }
+
+      @media (min-width: 576px) {
+        .central-card {
+          min-height: auto;
+          border-radius: 1rem;
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
+
+        .challenge-card-bg {
+          background-color: #f7f7f7;
+        }
+      }
+    </style>
+  </head>
+  <body class="background background-filter" data-new-gr-c-s-check-loaded="8.937.0" data-gr-ext-installed="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="https://unochallenge.nnrex.org/">UnoBench Challenge</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link " href="https://unochallenge.nnrex.org/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="https://unochallenge.nnrex.org/challenge-1/">challenge:1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="https://unochallenge.nnrex.org/challenge-2/">challenge:2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="https://unochallenge.nnrex.org/submit_results/">Submit Results</a>
+            </li>
+
+            
+          </ul>
+
+          <ul class="navbar-nav ms-auto">
+            
+            <li class="nav-item">
+              <a class="btn btn-primary btn-sm px-4" href="https://unochallenge.nnrex.org/accounts/login/">Log In</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container d-flex justify-content-center u-non-blurred">
+      <div class="col-lg central-card">
+<h1 class="font-bold text-center text-xl">Welcome to the UnoGrasp Challenge</h1>
+
+<div>
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla 
+finibus, lorem vitae euismod tincidunt, ex massa imperdiet odio, sed 
+pharetra eros mi in quam. Quisque sit amet velit vel augue elementum 
+lacinia. Phasellus posuere, nisl vel vestibulum eleifend, massa nisi 
+consequat ligula, at pulvinar ipsum eros eget nunc. Sed lorem enim, 
+tincidunt at neque et, tristique hendrerit ligula. Lorem ipsum dolor sit
+ amet, consectetur adipiscing elit. Aliquam consequat purus non pharetra
+ hendrerit. Interdum et malesuada fames ac ante ipsum primis in 
+faucibus. Mauris et orci ornare, posuere nulla nec, vestibulum nisl. Sed
+ et metus dui. Vestibulum posuere a quam eget euismod. Maecenas interdum
+ tellus eu libero vehicula, sit amet pretium dui tincidunt. Donec sem 
+turpis, molestie non venenatis vel, tempor eget ipsum.
+
+Nulla tincidunt, nisi id rhoncus gravida, sem dolor interdum urna, a 
+blandit tortor ante ac nisi. Nullam venenatis mi eget odio scelerisque 
+finibus. Nunc et ipsum vel urna tincidunt tempor eget sed urna. Sed 
+pellentesque consectetur enim in feugiat. Morbi sodales sapien tortor, 
+et vestibulum ex suscipit quis. Sed venenatis elit vel diam egestas 
+aliquet. Sed urna augue, tempor ac lacus vel, efficitur scelerisque 
+ipsum. Nunc id vulputate sem. Nullam id tristique dolor.
+
+Donec sodales eu ipsum sit amet finibus. Proin varius tellus a eros 
+congue, sed rutrum sem venenatis. Sed pulvinar neque diam. Nam lobortis 
+commodo libero, nec mollis nibh dignissim id. Suspendisse dictum lectus 
+sit amet quam pretium sodales. Suspendisse gravida dolor ante, non 
+elementum nunc scelerisque vitae. Sed egestas erat vitae ante dictum 
+convallis. Etiam placerat maximus gravida.
+
+Nulla ac malesuada sem. Nullam eget auctor elit. Phasellus metus nunc, 
+fermentum a est in, rhoncus pellentesque purus. Pellentesque aliquam 
+accumsan orci, malesuada luctus ante luctus ut. Sed tempus, ipsum semper
+ cursus lacinia, dolor orci sagittis nunc, et sollicitudin erat eros non
+ metus. Morbi pretium, urna vel suscipit commodo, mi ex consequat purus,
+ quis mattis eros sem vel quam. Class aptent taciti sociosqu ad litora 
+torquent per conubia nostra, per inceptos himenaeos. Vestibulum faucibus
+ varius nibh, dictum tempus orci congue ac. Nullam sodales, dui a 
+dignissim porttitor, quam metus imperdiet nisi, posuere tempus nibh est 
+in mauris. Vestibulum aliquam dui in nunc pellentesque tincidunt. 
+Integer ultricies mi id massa auctor tincidunt. Aenean sed tortor 
+volutpat quam luctus efficitur nec nec dui. Nam id metus in erat finibus
+ dapibus. Maecenas metus odio, facilisis at accumsan vitae, tempus vitae
+ lacus. Fusce eu metus est. Nam aliquam augue in condimentum dignissim.
+
+Suspendisse nec dolor dui. Ut sed porttitor dui. Donec in turpis lectus.
+ Nullam nec sem odio. Suspendisse commodo elit odio, at aliquam ligula 
+porttitor ut. Fusce sit amet orci tellus. Mauris aliquet libero et arcu 
+vehicula, nec consequat lacus volutpat. Aliquam placerat turpis eu 
+semper placerat. Vivamus eu est pellentesque, tristique lorem et, 
+convallis metus. Proin non dolor quis leo placerat gravida. Phasellus 
+vel ex nec enim accumsan eleifend. Etiam luctus blandit tortor sit amet 
+semper. Suspendisse potenti. Nunc volutpat nec orci eu imperdiet. Sed 
+tincidunt nulla at arcu dapibus, in tempor elit laoreet. 
+  </div>
+
+  <hr>
+
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Pick Your Challenge</h2>
+          <p class="text-muted">Two challenges, one winner. Select below.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <div class="card h-100 border-0 shadow-sm p-3 challenge-card-bg">
+              <div class="card-body d-flex flex-column">
+                <h4 class="card-title fw-bold text-primary">Challenge 1</h4>
+                <p class="card-text text-muted">
+                  Test your foundational knowledge in this introductory
+                  challenge.
+                </p>
+                <a href="https://unochallenge.nnrex.org/challenge-1/" class="btn btn-primary mt-auto">Start Challenge 1</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div class="card h-100 border-0 shadow-sm p-3 challenge-card-bg">
+              <div class="card-body d-flex flex-column">
+                <h4 class="card-title fw-bold text-success">Challenge 2</h4>
+                <p class="card-text text-muted">
+                  A much harder test for those who have mastered the basics.
+                </p>
+                <a href="https://unochallenge.nnrex.org/challenge-2/" class="btn btn-success mt-auto ">Start Challenge 2</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+</div>
+    </div>
+
+    <script src="challenge_files/bootstrap.bundle.min.js"></script>
+  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
