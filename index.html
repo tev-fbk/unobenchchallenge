@@ -4,39 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django Bootstrap App</title>
-    <link href="challenge_files/bootstrap.min.css" rel="stylesheet">
+
+    <link href="Django%20Bootstrap%20App_files/bootstrap.min.css" rel="stylesheet">
     <style>
       .easy {
-        background-color: #A1EEBD !important;
+        background-color: #a1eebd !important;
       }
 
       .medium {
-        background-color: #F6F7C4 !important;
+        background-color: #f6f7c4 !important;
       }
 
       .hard {
-        background-color: #F6D6D6 !important;
+        background-color: #f6d6d6 !important;
       }
 
-      .background-filter::after {
-        -webkit-backdrop-filter: blur(4px); /* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
-        backdrop-filter: blur(4px); /* Supported in all major browsers */
+      /* .background-filter::after {
+        -webkit-backdrop-filter: blur(4px); 
+        backdrop-filter: blur(4px); 
 
         content: "";
         display: block;
         position: absolute;
         width: 100%; height: 100%;
         top: 0;
-      }
+      } */
 
-      .background-filter {
+      /* .background-filter {
         position: relative;
-      }
+      } */
       .background {
-        background: url(/static/images/bg.878030f6cfe1.jpg);
+        background: #892ca8;
+        background: linear-gradient(
+          135deg,
+          rgba(137, 44, 168, 1) 0%,
+          rgba(87, 93, 199, 1) 50%,
+          rgba(58, 208, 224, 1) 100%
+        );
+        /* background: url(/static/images/bg.jpg);
         background-position: center top;
-        background-size: 100% auto;
-        <!-- backdrop-filter: blur(10px); -->
+        background-size: 100% auto; */
       }
       .u-non-blurred {
         position: relative;
@@ -47,12 +54,12 @@
       /* Offset for fixed navbar */
       body {
         min-height: 100vh;
-        padding-top: 70px;
+        padding-top: 40px;
       }
 
       /* Central container: Full screen on mobile, limited on desktop */
       .central-card {
-        min-height: calc(100vh - 70px);
+        min-height: calc(100vh - 40px);
         background: white;
         padding: 2rem;
       }
@@ -72,10 +79,10 @@
       }
     </style>
   </head>
-  <body class="background background-filter" data-new-gr-c-s-check-loaded="8.937.0" data-gr-ext-installed="">
+  <body class="background background-filter" data-new-gr-c-s-check-loaded="8.937.0" data-gr-ext-installed="" data-gr-ext-disabled="forever">
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold text-primary" href="https://unochallenge.nnrex.org/">UnoBench Challenge</a>
+        <a class="navbar-brand fw-bold text-primary" href="http://localhost:8080/">UnoBench Challenge</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
@@ -84,16 +91,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link " href="https://unochallenge.nnrex.org/">Home</a>
+              <a class="nav-link active fw-bold text-primary" href="http://localhost:8080/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="https://unochallenge.nnrex.org/challenge-1/">challenge:1</a>
+              <a class="nav-link " href="http://localhost:8080/challenge-1/">challenge: SOM</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="https://unochallenge.nnrex.org/challenge-2/">challenge:2</a>
+              <a class="nav-link " href="http://localhost:8080/challenge-2/">challenge: NLP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="https://unochallenge.nnrex.org/submit_results/">Submit Results</a>
+              <a class="nav-link " href="http://localhost:8080/submit_results/">Submit Results</a>
             </li>
 
             
@@ -102,7 +109,7 @@
           <ul class="navbar-nav ms-auto">
             
             <li class="nav-item">
-              <a class="btn btn-primary btn-sm px-4" href="https://unochallenge.nnrex.org/accounts/login/">Log In</a>
+              <a class="btn btn-primary btn-sm px-4" href="http://localhost:8080/accounts/login/">Log In</a>
             </li>
             
           </ul>
@@ -112,101 +119,763 @@
 
     <div class="container d-flex justify-content-center u-non-blurred">
       <div class="col-lg central-card">
-<h1 class="font-bold text-center text-xl">Welcome to the UnoGrasp Challenge</h1>
+<h1 class="font-bold text-center text-xl">UnoBench Challenge 2026</h1>
+
+<section class="shadow p-3 mb-5 bg-info bg-gradient rounded">
+  <h2>News</h2>
+  <ul class="news-list">
+    <li class="news-item">
+      <span class="news-date">[May 19, 2026]</span> Challenge page schema and
+      structural evaluation engine guidelines have been deployed!
+    </li>
+    <li class="news-item">
+      <span class="news-date">[Upcoming]</span> Keep track of this section for
+      the official Codabench/Kaggle evaluation platform registration link and
+      our GitHub repository deployment.
+    </li>
+  </ul>
+</section>
 
 <div>
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla 
-finibus, lorem vitae euismod tincidunt, ex massa imperdiet odio, sed 
-pharetra eros mi in quam. Quisque sit amet velit vel augue elementum 
-lacinia. Phasellus posuere, nisl vel vestibulum eleifend, massa nisi 
-consequat ligula, at pulvinar ipsum eros eget nunc. Sed lorem enim, 
-tincidunt at neque et, tristique hendrerit ligula. Lorem ipsum dolor sit
- amet, consectetur adipiscing elit. Aliquam consequat purus non pharetra
- hendrerit. Interdum et malesuada fames ac ante ipsum primis in 
-faucibus. Mauris et orci ornare, posuere nulla nec, vestibulum nisl. Sed
- et metus dui. Vestibulum posuere a quam eget euismod. Maecenas interdum
- tellus eu libero vehicula, sit amet pretium dui tincidunt. Donec sem 
-turpis, molestie non venenatis vel, tempor eget ipsum.
+  <h2>Introduction</h2>
+  <p>
+    Autonomous robotic grasping in highly cluttered environments—such as
+    industrial bins, warehouse logistics totes, or chaotic domestic
+    spaces—remains a fundamental bottleneck in robotics. While modern vision
+    systems excel at identifying isolated, clearly visible surface-level
+    objects, achieving true operational autonomy requires models to process
+    complex semantic and geometric physical hierarchies.
+  </p>
+  <p>
+    To grasp a buried or partially obscured item safely, an intelligent agent
+    cannot merely rely on standard vision-language grounding. Instead, it must
+    implicitly map the environment, reason systematically about
+    <strong>obstructions and physical occlusions</strong>, and determine the
+    exact sequence of clearing actions required to safely unlock an unobstructed
+    trajectory to the target object.
+  </p>
+  <hr>
 
-Nulla tincidunt, nisi id rhoncus gravida, sem dolor interdum urna, a 
-blandit tortor ante ac nisi. Nullam venenatis mi eget odio scelerisque 
-finibus. Nunc et ipsum vel urna tincidunt tempor eget sed urna. Sed 
-pellentesque consectetur enim in feugiat. Morbi sodales sapien tortor, 
-et vestibulum ex suscipit quis. Sed venenatis elit vel diam egestas 
-aliquet. Sed urna augue, tempor ac lacus vel, efficitur scelerisque 
-ipsum. Nunc id vulputate sem. Nullam id tristique dolor.
+  <!-- <div class="abstract-box">
+    <div class="abstract-title">Challenge Foundation Abstract</div>
+    "Successful robotic grasping in cluttered environments not only requires a
+    model to visually ground a target object but also to reason about
+    obstructions that must be cleared beforehand. While current vision-language
+    embodied reasoning models show emergent spatial understanding, they remain
+    limited in terms of obstruction reasoning and accessibility planning. To
+    bridge this gap, we present UNOGrasp, a learning-based vision-language model
+    capable of performing visually-grounded obstruction reasoning to infer the
+    sequence of actions needed to unobstruct the path and grasp the target
+    object..."
+  </div> -->
 
-Donec sodales eu ipsum sit amet finibus. Proin varius tellus a eros 
-congue, sed rutrum sem venenatis. Sed pulvinar neque diam. Nam lobortis 
-commodo libero, nec mollis nibh dignissim id. Suspendisse dictum lectus 
-sit amet quam pretium sodales. Suspendisse gravida dolor ante, non 
-elementum nunc scelerisque vitae. Sed egestas erat vitae ante dictum 
-convallis. Etiam placerat maximus gravida.
+  <h2>Goal of the Challenge</h2>
+  <p>
+    The core objective of this workshop challenge is to accelerate the
+    development of deep learning frameworks—specifically Vision-Language Models
+    (VLMs) and multi-modal embodied network architectures—capable of executing
+    **visually-grounded obstruction reasoning**.
+  </p>
+  <p>
+    Participants will train and evaluate their approaches using the newly
+    curated <strong>UNOBench dataset</strong>. Built on top of MetaGraspNetV2,
+    UNOBench provides a rigorous benchmark consisting of over 100,000 distinct
+    human-annotated obstruction paths, rich natural-language instructions,
+    spatial contact points, and fine-grained object obstruction ratios.
+  </p>
 
-Nulla ac malesuada sem. Nullam eget auctor elit. Phasellus metus nunc, 
-fermentum a est in, rhoncus pellentesque purus. Pellentesque aliquam 
-accumsan orci, malesuada luctus ante luctus ut. Sed tempus, ipsum semper
- cursus lacinia, dolor orci sagittis nunc, et sollicitudin erat eros non
- metus. Morbi pretium, urna vel suscipit commodo, mi ex consequat purus,
- quis mattis eros sem vel quam. Class aptent taciti sociosqu ad litora 
-torquent per conubia nostra, per inceptos himenaeos. Vestibulum faucibus
- varius nibh, dictum tempus orci congue ac. Nullam sodales, dui a 
-dignissim porttitor, quam metus imperdiet nisi, posuere tempus nibh est 
-in mauris. Vestibulum aliquam dui in nunc pellentesque tincidunt. 
-Integer ultricies mi id massa auctor tincidunt. Aenean sed tortor 
-volutpat quam luctus efficitur nec nec dui. Nam id metus in erat finibus
- dapibus. Maecenas metus odio, facilisis at accumsan vitae, tempus vitae
- lacus. Fusce eu metus est. Nam aliquam augue in condimentum dignissim.
-
-Suspendisse nec dolor dui. Ut sed porttitor dui. Donec in turpis lectus.
- Nullam nec sem odio. Suspendisse commodo elit odio, at aliquam ligula 
-porttitor ut. Fusce sit amet orci tellus. Mauris aliquet libero et arcu 
-vehicula, nec consequat lacus volutpat. Aliquam placerat turpis eu 
-semper placerat. Vivamus eu est pellentesque, tristique lorem et, 
-convallis metus. Proin non dolor quis leo placerat gravida. Phasellus 
-vel ex nec enim accumsan eleifend. Etiam luctus blandit tortor sit amet 
-semper. Suspendisse potenti. Nunc volutpat nec orci eu imperdiet. Sed 
-tincidunt nulla at arcu dapibus, in tempor elit laoreet. 
-  </div>
+  <h3>Key Objectives &amp; Evaluation Pillars</h3>
+  <p>
+    Submissions will be programmatically and qualitatively scored based on their
+    capacity to solve three primary sub-problems directly from raw visual inputs
+    and linguistic prompts:
+  </p>
+  <ul>
+    <li>
+      <strong>Obstruction Sequence Prediction:</strong> Discerning the accurate
+      relational dependency graph ("obstructor" vs. "obstructee") and ordering
+      the sequence of item removals.
+    </li>
+    <li>
+      <strong>Spatial Metric Inference:</strong> Quantifying obstruction ratios
+      and predicting optimal geometric physical contact points for safe
+      manipulation.
+    </li>
+    <li>
+      <strong>Actionable Plan Synthesis:</strong> Formulating multi-step textual
+      or logical plans that can map safely to physical robotic manipulator
+      tasks.
+    </li>
+  </ul>
 
   <hr>
 
-        <div class="text-center mb-5">
-          <h2 class="fw-bold">Pick Your Challenge</h2>
-          <p class="text-muted">Two challenges, one winner. Select below.</p>
-        </div>
+  <h2>Timelines</h2>
+  <p>
+    All deadlines are strictly enforced at <strong>23:59 UTC</strong> on the
+    dates listed below:
+  </p>
 
-        <div class="row g-4">
-          <div class="col-12 col-md-6">
-            <div class="card h-100 border-0 shadow-sm p-3 challenge-card-bg">
-              <div class="card-body d-flex flex-column">
-                <h4 class="card-title fw-bold text-primary">Challenge 1</h4>
-                <p class="card-text text-muted">
-                  Test your foundational knowledge in this introductory
-                  challenge.
-                </p>
-                <a href="https://unochallenge.nnrex.org/challenge-1/" class="btn btn-primary mt-auto">Start Challenge 1</a>
-              </div>
-            </div>
-          </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="width: 25%">Phase / Milestone</th>
+        <th style="width: 25%">Date</th>
+        <th style="width: 50%">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Challenge &amp; Data Launch</strong></td>
+        <td>October 1, 2026</td>
+        <td>
+          UNOBench training dataset, visualization toolkits, and baseline model
+          (UNOGrasp) code weights released.
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Validation Phase</strong></td>
+        <td>November 15, 2026</td>
+        <td>
+          The evaluation server opens. Live public leaderboard tracks
+          participant validation submissions.
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Final Test Submissions</strong></td>
+        <td>January 15, 2027</td>
+        <td>
+          Hidden test dataset released. Final containerized code and target
+          predictions submission deadline.
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Winner Announcement</strong></td>
+        <td>February 1, 2027</td>
+        <td>
+          Top performing architectures finalized following verification against
+          cheating/overfitting.
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Workshop Day</strong></td>
+        <td>March 20, 2027</td>
+        <td>
+          Winning teams present technical talks alongside invited keynotes at
+          our official conference venue.
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-          <div class="col-12 col-md-6">
-            <div class="card h-100 border-0 shadow-sm p-3 challenge-card-bg">
-              <div class="card-body d-flex flex-column">
-                <h4 class="card-title fw-bold text-success">Challenge 2</h4>
-                <p class="card-text text-muted">
-                  A much harder test for those who have mastered the basics.
-                </p>
-                <a href="https://unochallenge.nnrex.org/challenge-2/" class="btn btn-success mt-auto ">Start Challenge 2</a>
-              </div>
-            </div>
-          </div>
-        </div>
+  <hr>
+
+  <div class="info-footer">
+    <p>
+      <strong>Organizing Secretariat &amp; Contact:</strong> For inquiries regarding
+      automated evaluation configurations, API usage constraints, or academic
+      dataset licensing, please contact our committee at
+      <code>organizers@unobench-challenge.org</code>.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<div class="text-center mb-5">
+  <h2 class="fw-bold">Pick Your Challenge</h2>
+  <p class="text-muted">Two challenges, one winner. Select below.</p>
+</div>
+
+<div class="row g-4">
+  <div class="col-12 col-md-6">
+    <div class="card h-100 border-0 shadow-sm p-3 challenge-card-bg">
+      <div class="card-body d-flex flex-column">
+        <h4 class="card-title fw-bold text-primary">Challenge 1</h4>
+        <p class="card-text text-muted">
+          Test your foundational knowledge in this introductory challenge.
+        </p>
+        <a href="http://localhost:8080/challenge-1/" class="btn btn-primary mt-auto">Start Challenge 1</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-6">
+    <div class="card h-100 border-0 shadow-sm p-3 challenge-card-bg">
+      <div class="card-body d-flex flex-column">
+        <h4 class="card-title fw-bold text-success">Challenge 2</h4>
+        <p class="card-text text-muted">
+          A much harder test for those who have mastered the basics.
+        </p>
+        <a href="http://localhost:8080/challenge-2/" class="btn btn-success mt-auto">Start Challenge 2</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
     </div>
 
-    <script src="challenge_files/bootstrap.bundle.min.js"></script>
+    <script src="Django%20Bootstrap%20App_files/bootstrap.bundle.min.js"></script>
   
 
-</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+<link rel="stylesheet" href="Django%20Bootstrap%20App_files/print.css" media="print">
+<link rel="stylesheet" href="Django%20Bootstrap%20App_files/toolbar.css">
+
+
+<script type="module" src="Django%20Bootstrap%20App_files/toolbar.js" async=""></script>
+
+<div id="djDebug" class="" dir="ltr" data-request-id="8da25614f66544598c5eb72b526c4498" data-render-panel-url="/__debug__/render_panel/" data-sidebar-url="/__debug__/history_sidebar/" data-default-show="true" data-update-on-fetch="False" data-theme="dark" data-user-theme="auto">
+  <div class="djdt-hidden" id="djDebugToolbar">
+    <ul id="djDebugPanelList">
+      <li><a id="djHideToolBarButton" href="#" title="Hide toolbar">Hide »</a></li>
+      <li>
+        <a id="djToggleThemeButton" href="#" title="Toggle Theme">
+          Toggle Theme <svg aria-hidden="true" class="djdt-hidden theme-auto" fill="currentColor" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 16q0 3.264 1.28 6.24t3.392 5.088 5.12 3.424 6.208 1.248q3.264 0 6.24-1.248t5.088-3.424 3.392-5.088 1.28-6.24-1.28-6.208-3.392-5.12-5.088-3.392-6.24-1.28q-3.264 0-6.208 1.28t-5.12 3.392-3.392 5.12-1.28 6.208zM4 16q0-3.264 1.6-6.016t4.384-4.352 6.016-1.632 6.016 1.632 4.384 4.352 1.6 6.016-1.6 6.048-4.384 4.352-6.016 1.6-6.016-1.6-4.384-4.352-1.6-6.048zM16 26.016q2.72 0 5.024-1.344t3.648-3.648 1.344-5.024-1.344-4.992-3.648-3.648-5.024-1.344v20z"></path>
+</svg>
+<svg aria-hidden="true" class="djdt-hidden theme-light" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C12.4142 1.25 12.75 1.58579 12.75 2V4C12.75 4.41421 12.4142 4.75 12 4.75C11.5858 4.75 11.25 4.41421 11.25 4V2C11.25 1.58579 11.5858 1.25 12 1.25ZM3.66865 3.71609C3.94815 3.41039 4.42255 3.38915 4.72825 3.66865L6.95026 5.70024C7.25596 5.97974 7.2772 6.45413 6.9977 6.75983C6.7182 7.06553 6.2438 7.08677 5.9381 6.80727L3.71609 4.77569C3.41039 4.49619 3.38915 4.02179 3.66865 3.71609ZM20.3314 3.71609C20.6109 4.02179 20.5896 4.49619 20.2839 4.77569L18.0619 6.80727C17.7562 7.08677 17.2818 7.06553 17.0023 6.75983C16.7228 6.45413 16.744 5.97974 17.0497 5.70024L19.2718 3.66865C19.5775 3.38915 20.0518 3.41039 20.3314 3.71609ZM12 7.75C9.65279 7.75 7.75 9.65279 7.75 12C7.75 14.3472 9.65279 16.25 12 16.25C14.3472 16.25 16.25 14.3472 16.25 12C16.25 9.65279 14.3472 7.75 12 7.75ZM6.25 12C6.25 8.82436 8.82436 6.25 12 6.25C15.1756 6.25 17.75 8.82436 17.75 12C17.75 15.1756 15.1756 17.75 12 17.75C8.82436 17.75 6.25 15.1756 6.25 12ZM1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H4C4.41421 11.25 4.75 11.5858 4.75 12C4.75 12.4142 4.41421 12.75 4 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12ZM19.25 12C19.25 11.5858 19.5858 11.25 20 11.25H22C22.4142 11.25 22.75 11.5858 22.75 12C22.75 12.4142 22.4142 12.75 22 12.75H20C19.5858 12.75 19.25 12.4142 19.25 12ZM17.0255 17.0252C17.3184 16.7323 17.7933 16.7323 18.0862 17.0252L20.3082 19.2475C20.6011 19.5404 20.601 20.0153 20.3081 20.3082C20.0152 20.6011 19.5403 20.601 19.2475 20.3081L17.0255 18.0858C16.7326 17.7929 16.7326 17.3181 17.0255 17.0252ZM6.97467 17.0253C7.26756 17.3182 7.26756 17.7931 6.97467 18.086L4.75244 20.3082C4.45955 20.6011 3.98468 20.6011 3.69178 20.3082C3.39889 20.0153 3.39889 19.5404 3.69178 19.2476L5.91401 17.0253C6.2069 16.7324 6.68177 16.7324 6.97467 17.0253ZM12 19.25C12.4142 19.25 12.75 19.5858 12.75 20V22C12.75 22.4142 12.4142 22.75 12 22.75C11.5858 22.75 11.25 22.4142 11.25 22V20C11.25 19.5858 11.5858 19.25 12 19.25Z" fill="currentColor"></path>
+</svg>
+<svg aria-hidden="true" class="djdt-hidden theme-dark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+        </a>
+      </li>
+      
+        
+
+<li id="djdt-HistoryPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtHistoryPanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="History" class="HistoryPanel">
+  
+  History
+  
+    
+      <br><small>/</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-VersionsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtVersionsPanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="Versions" class="VersionsPanel">
+  
+  Versions
+  
+    
+      <br><small>Django 6.0.5</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-TimerPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtTimerPanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="Time" class="TimerPanel">
+  
+  Time
+  
+    
+      <br><small>CPU: 44.24ms (41.33ms)</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-SettingsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtSettingsPanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="Settings from 'config.settings.local'" class="SettingsPanel">
+  
+  Settings
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-HeadersPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtHeadersPanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="Headers" class="HeadersPanel">
+  
+  Headers
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-RequestPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtRequestPanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="Request" class="RequestPanel">
+  
+  Request
+  
+    
+      <br><small>home</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-SQLPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtSQLPanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="SQL queries from 1 connection" class="SQLPanel">
+  
+  SQL
+  
+    
+      <br><small>1 query in 2.35ms</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-StaticFilesPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtStaticFilesPanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="Static files (0 found, 1 used)" class="StaticFilesPanel">
+  
+  Static files
+  
+    
+      <br><small>1 file used</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-TemplatesPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtTemplatesPanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="Templates (2 rendered)" class="TemplatesPanel">
+  
+  Templates
+  
+    
+      <br><small>challenge/home.html</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-AlertsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtAlertsPanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="Alerts" class="AlertsPanel">
+  
+  Alerts
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-CachePanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtCachePanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="Cache calls from 1 backend" class="CachePanel">
+  
+  Cache
+  
+    
+      <br><small>0 calls in 0.00ms</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-SignalsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtSignalsPanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="Signals" class="SignalsPanel">
+  
+  Signals
+  
+    
+      <br><small>50 receivers of 15 signals</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-CommunityPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtCommunityPanel" checked="checked" title="Disable for next and successive requests">
+  
+    <a href="#" title="Community" class="CommunityPanel">
+  
+  Community
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-RedirectsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtRedirectsPanel" title="Enable for next and successive requests">
+  
+    <div class="djdt-contentless djdt-disabled">
+  
+  Intercept redirects
+  
+  
+    </div>
+  
+</li>
+
+      
+        
+
+<li id="djdt-ProfilingPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtProfilingPanel" title="Enable for next and successive requests">
+  
+    <div class="djdt-contentless djdt-disabled">
+  
+  Profiling
+  
+  
+    </div>
+  
+</li>
+
+      
+    </ul>
+  </div>
+  <div class="" id="djDebugToolbarHandle" style="top: 265px;">
+    <div title="Show toolbar" id="djShowToolBarButton">
+      <span id="djShowToolBarD">D</span><span id="djShowToolBarJ">J</span>DT
+    </div>
+  </div>
+
+  
+    
+
+
+  <div id="HistoryPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>History</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="VersionsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Versions</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="TimerPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Time</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="SettingsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Settings from 'config.settings.local'</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="HeadersPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Headers</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="RequestPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Request</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="SQLPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>SQL queries from 1 connection</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="StaticFilesPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Static files (0 found, 1 used)</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="TemplatesPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Templates (2 rendered)</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="AlertsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Alerts</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="CachePanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Cache calls from 1 backend</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="SignalsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Signals</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="CommunityPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Community</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+  
+    
+
+
+
+  
+  <div id="djDebugWindow" class="djdt-panelContent djdt-hidden"></div>
+</div>
+
+
+</body></html>
