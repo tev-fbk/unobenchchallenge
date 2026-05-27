@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Bootstrap App</title>
+
+    <link href="Django%20Bootstrap%20App_files/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .easy {
+        background-color: #a1eebd !important;
+      }
+
+      .medium {
+        background-color: #f6f7c4 !important;
+      }
+
+      .hard {
+        background-color: #f6d6d6 !important;
+      }
+
+      /* .background-filter::after {
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%; height: 100%;
+        top: 0;
+      } */
+
+      /* .background-filter {
+        position: relative;
+      } */
+
+      .query-obj{
+        color: blue;
+      }
+      .target-obj{
+        color: red;
+      }
+      .background {
+        background: #a5a5a5;
+
+        /* background: url(/static/images/bg.878030f6cfe1.jpg);
+        background-position: center top;
+        background-size: 100% auto; */
+      }
+      .u-non-blurred {
+        position: relative;
+        z-index: 1;
+
+        /* For text decoration, not mandatory */
+      }
+      /* Offset for fixed navbar */
+      body {
+        min-height: 100vh;
+        padding-top: 40px;
+      }
+
+      /* Central container: Full screen on mobile, limited on desktop */
+      .central-card {
+        min-height: calc(100vh - 40px);
+        background: white;
+        padding: 2rem;
+      }
+
+      @media (min-width: 576px) {
+        .central-card {
+          min-height: auto;
+          border-radius: 1rem;
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
+
+        .challenge-card-bg {
+          background-color: #f7f7f7;
+        }
+      }
+    </style>
+  </head>
+  <body class="background background-filter" data-new-gr-c-s-check-loaded="8.937.0" data-gr-ext-installed="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="https://unochallenge.nnrex.org/">UnoBench Challenge</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://tev-fbk.github.io/unobenchchallenge/">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link  active fw-bold text-primary" href="https://tev-fbk.github.io/unobenchchallenge/data.html">Data</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container d-flex justify-content-center u-non-blurred">
+      <div class="col-lg central-card">
+
+
+
+<h1>
+		UnoBench
+</h1>
+<p><strong>UnoBench</strong> is a benchmark for <strong>obstruction-aware robotic grasping</strong> in cluttered scenes.</p>
+<p>It is designed to evaluate whether a method can perform <strong>target-centric obstruction reasoning</strong> before grasping, either from natural-language instructions or from object-indexed visual representations.</p>
+<p>UnoBench supports both <strong>vision-language models</strong> and <strong>traditional / modular robotic reasoning algorithms</strong> through two complementary settings:</p>
+<ul>
+<li><strong>NLP setting</strong>: the target object is specified by a 
+free-form natural-language instruction. This setting evaluates language 
+grounding and obstruction reasoning jointly.</li>
+<li><strong>SoM setting</strong>: the scene is represented using object-indexed visual prompts, where objects are explicitly marked with IDs. This setting does <strong>not require natural-language input</strong>,
+ making the benchmark compatible with traditional perception-reasoning 
+pipelines, graph-based reasoning methods, and modular robotic grasping 
+systems.</li>
+</ul>
+<p>Unlike conventional grasping datasets that mainly focus on direct 
+object detection or grasp pose prediction, UnoBench emphasizes <strong>which objects obstruct the target object</strong> and how such obstruction relationships can be represented, measured, and reasoned about.</p>
+<h2>
+	<span>
+		Dataset Overview
+	</span>
+</h2>
+<p>UnoBench contains synthetic cluttered-scene data with RGB images, 
+Set-of-Mark images, annotations, and obstruction-related metadata.</p>
+<p>The benchmark focuses on <strong>target-centric obstruction reasoning</strong>.
+ Given a target object, the method is expected to identify the objects 
+that block or constrain access to the target before grasping.</p>
+<p>The dataset provides:</p>
+<ul>
+<li>RGB images of cluttered scenes.</li>
+<li>Set-of-Mark images with object IDs.</li>
+<li>Object-level annotations.</li>
+<li>Obstruction / occlusion relationship metadata.</li>
+<li>Small test splits for both NLP and SoM evaluation settings.</li>
+</ul>
+
+<h4>Sample data</h4>
+<div class="container text-center">
+  <div class="row row-cols-3">
+    <div class="col">
+      <strong>
+        Natural Language Image
+      </strong>
+      <img src="Django%20Bootstrap%20App_files/image_000578_easy.37b72ec801b2.png" style="max-width:100%" alt="My image">
+
+      <div class="text-start">
+        <div>
+          <span class="query-obj"> query object name:</span> "red and orange toy drill"
+        </div>
+
+        <div>
+          <span class="target-obj"> target objects coordinates :</span> [(x1,y1)] (any points on top of the yellow detergent bottle)
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <strong>
+        Set-of-Marks Image
+      </strong>
+      <img src="Django%20Bootstrap%20App_files/image_000578_easy_som.8cfd4ae34c81.png" style="max-width:100%" alt="My image">
+
+      <div class="text-start">
+        <div>
+          <span class="query-obj"> Query object ID:</span> "Object 2"
+        </div>
+
+        <div>
+          <span class="target-obj"> target objects Ids :</span> ["Object 3"]
+        </div>
+      </div>
+    </div>
+
+    <div class="col text-start">
+      <strong>
+        Metadata
+      </strong>
+      <pre>      <code class="language-text">
+"index": 1992,
+"image_path": "images/image_000578.png",
+"som_image_path": "images_som/image_000578.png",
+"image_id": 578,
+<span class="query-obj">"query_object": {
+  "obj_id": 2,
+  "object_name": "red and orange toy drill"
+},</span>
+<span class="target-obj">"target_objects": [
+  {
+    "obj_id": 3,
+    "object_name": "yellow detergent bottle"
+  }
+],</span>
+"occlusion_paths": [
+  [
+    3,
+    2
+  ]
+],
+"difficulty": "Easy",
+"k_min": 1,
+"num_paths": 1,
+"only_som": 0
+    </code>
+    </pre>
+    </div>
+  </div>
+</div>
+
+
+<h2>
+	<span>
+		Dataset Structure
+	</span>
+</h2>
+<div class="relative group repo-copy-code"><pre><code class="language-text">UnoBench/
+├── images.zip
+├── images_som.zip
+├── annotations.zip
+├── test_GT_small.json
+├── test_nlp_small.jsonl
+├── test_som_small.jsonl
+└── meta_data/
+    ├── Synthetic_train.json
+    ├── image_id_scene_view_id_mapping.json
+    ├── name_for_all.json
+    └── occ_info/
+        ├── obs_information.json
+        └── masks.zip
+</code></pre>
+
+
+<h2>
+	<span>
+		File Description
+	</span>
+</h2>
+
+<h3>
+	<span>
+		Main Archives
+	</span>
+</h3>
+<div>
+	<table>
+		<thead><tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+
+		</thead><tbody><tr>
+<td><code>images.zip</code></td>
+<td>RGB images of synthetic cluttered scenes.</td>
+</tr>
+<tr>
+<td><code>images_som.zip</code></td>
+<td>Set-of-Mark images with object IDs / visual prompts.</td>
+</tr>
+<tr>
+<td><code>annotations.zip</code></td>
+<td>Instance segmentation masks associated with each image. You can find SoM ID for each object from here.</td>
+</tr>
+</tbody>
+	</table>
+</div>
+<h3>
+	<span>
+		Test Files
+	</span>
+</h3>
+<div>
+	<table>
+		<thead><tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+
+		</thead><tbody><tr>
+<td><code>test_GT_small.json</code></td>
+<td>Ground-truth obstruction annotations for the small test split.</td>
+</tr>
+<tr>
+<td><code>test_nlp_small.jsonl</code></td>
+<td>Evaluation samples for the NLP setting.</td>
+</tr>
+<tr>
+<td><code>test_som_small.jsonl</code></td>
+<td>Evaluation samples for the SoM setting.</td>
+</tr>
+</tbody>
+	</table>
+</div>
+<h3>
+	<span>
+		Metadata
+	</span>
+</h3>
+<div>
+	<table>
+		<thead><tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+
+		</thead><tbody><tr>
+<td><code>meta_data/Synthetic_train.json</code></td>
+<td>Metadata for the synthetic training split.</td>
+</tr>
+<tr>
+<td><code>meta_data/image_id_scene_view_id_mapping.json</code></td>
+<td>Mapping between image IDs, scene IDs, and view IDs.</td>
+</tr>
+<tr>
+<td><code>meta_data/name_for_all.json</code></td>
+<td>Human-annotated descriptions for each object used in the dataset.</td>
+</tr>
+<tr>
+<td><code>meta_data/occ_info/obs_information.json</code></td>
+<td>Obstruction / occlusion relationship information for each pair, 
+including obstruction ratio, contact point and obstruction degree.</td>
+</tr>
+<tr>
+<td><code>meta_data/occ_info/masks.zip</code></td>
+<td>Instance mask for each obstruction pair.</td>
+</tr>
+</tbody>
+	</table>
+</div>
+<h2>
+	<span>
+		Download
+	</span>
+</h2>
+<p>You can download the full dataset with:</p>
+<div><pre><code>hf download rjiao/UnoBench \
+  --repo-type dataset \
+  --local-dir ./UnoBench
+</code></pre>
+<p>Or download individual files:</p>
+<div><pre><code>hf download rjiao/UnoBench images.zip \
+  --repo-type dataset \
+  --local-dir ./UnoBench
+
+hf download rjiao/UnoBench images_som.zip \
+  --repo-type dataset \
+  --local-dir ./UnoBench
+
+hf download rjiao/UnoBench annotations.zip \
+  --repo-type dataset \
+  --local-dir ./UnoBench
+</code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+<h2 class="relative group flex items-baseline">
+	<span>
+		Extraction
+	</span>
+</h2>
+<p>After downloading, unzip the main archives:</p>
+<div class="relative group repo-copy-code"><pre><code class="language-bash"><span class="hljs-built_in">cd</span> UnoBench
+
+unzip images.zip
+unzip images_som.zip
+unzip annotations.zip
+unzip meta_data/occ_info/masks.zip -d meta_data/occ_info/
+</code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+<p>After extraction, the dataset should contain RGB images, Set-of-Mark images, annotation files, and obstruction-related metadata.</p>
+<h2 class="relative group flex items-baseline">
+	<span>
+		Evaluation Settings
+	</span>
+</h2>
+<p>UnoBench provides two complementary evaluation settings to support different types of methods.</p>
+<h3 class="relative group flex items-baseline">
+	<span>
+		NLP Setting
+	</span>
+</h3>
+<p>In the NLP setting, each sample provides a natural-language instruction and the corresponding RGB image.</p>
+<p>The method needs to identify the target object from language and 
+visual input, then reason about which objects obstruct the target before
+ grasping.</p>
+<p>This setting is suitable for evaluating:</p>
+<ul>
+<li>Vision-language models.</li>
+<li>Language-conditioned robotic grasping methods.</li>
+<li>End-to-end multimodal reasoning models.</li>
+<li>Methods that jointly perform language grounding and visual reasoning.</li>
+</ul>
+<p>Relevant file:</p>
+<div class="relative group repo-copy-code"><pre><code class="language-text">test_nlp_small.jsonl
+</code></pre><button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80"><svg class="" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" focusable="false" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"></path><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"></path><rect fill="none" width="32" height="32"></rect></svg></button></div>
+<h3 class="relative group flex items-baseline">
+	<span>
+		SoM Setting
+	</span>
+</h3>
+<p>In the SoM setting, each sample provides a Set-of-Mark image where objects are explicitly indexed with IDs.</p>
+<p>This setting does <strong>not require natural-language input</strong>. Instead, the target and candidate objects can be represented through object IDs or structured object-level information.</p>
+<p>This makes the SoM setting suitable for evaluating:</p>
+<ul>
+<li>Vision-language models with object-indexed visual prompts.</li>
+<li>Traditional perception-reasoning pipelines.</li>
+<li>Graph-based obstruction reasoning algorithms.</li>
+<li>Modular robotic grasping systems.</li>
+<li>Methods that operate on object IDs, masks, or structured scene representations.</li>
+</ul>
+<p>Relevant file:</p>
+<div class="relative group repo-copy-code"><pre><code class="language-text">test_som_small.jsonl
+</code></pre>
+<h3 class="relative group flex items-baseline">
+	<span>
+		Ground Truth
+	</span>
+</h3>
+<p>The ground-truth obstruction annotations used for evaluation are provided in:</p>
+<div class="relative group repo-copy-code"><pre><code class="language-text">test_GT_small.json
+</code></pre>
+<h2 class="relative group flex items-baseline">
+	<span>
+		Metadata Format
+	</span>
+</h2>
+<p>The metadata files provide scene-level and object-level information, 
+including image IDs, scene IDs, view IDs, object names, and obstruction 
+relationships.</p>
+<p>Typical fields may include:</p>
+<div class="relative group repo-copy-code"><pre><code class="language-text">scene_id
+view_id
+target_object
+occlusion_paths
+top_objects
+depends_on
+num_paths
+difficulty
+</code></pre>
+<p>The obstruction information is organized in a <strong>target-centric</strong> manner. For each target object, the dataset describes the objects that obstruct it and the corresponding obstruction paths.</p>
+<h2 class="relative group flex items-baseline">
+	<span>
+		Intended Use
+	</span>
+</h2>
+<p>UnoBench is designed for research on:</p>
+<ul>
+<li>Obstruction-aware robotic grasping.</li>
+<li>Vision-language reasoning for robotics.</li>
+<li>Language-conditioned manipulation in cluttered scenes.</li>
+<li>Object-level reasoning and scene understanding.</li>
+<li>Set-of-Mark prompting for robotic perception.</li>
+<li>Traditional and modular obstruction reasoning pipelines.</li>
+<li>Graph-based reasoning for robotic manipulation.</li>
+<li>Evaluation of high-level reasoning before low-level grasp execution.</li>
+</ul>
+<h2 class="relative group flex items-baseline">
+	<span>
+		Notes
+	</span>
+</h2>
+<p>UnoBench focuses on high-level obstruction reasoning before grasping.
+ It is not limited to a specific low-level grasp planner or robot 
+controller.</p>
+<p>Researchers can use UnoBench to evaluate whether a method can 
+correctly identify obstructing objects before executing a grasp. The 
+benchmark can therefore be used together with different downstream 
+grasping pipelines, including both learning-based and classical robotic 
+systems.</p>
+<h2 class="relative group flex items-baseline">
+	<span>
+		Citation
+	</span>
+</h2>
+<button class="absolute top-3 right-3 transition opacity-0 group-hover:opacity-80">
+  <h2 class="relative group flex items-baseline">
+	<span>
+		License
+	</span>
+</h2>
+<p>This dataset is released for research purposes.</p>
+<p>Please check the license information before using the dataset for commercial applications.</p>
+
+</button></div>
+    </div>
+
+    <script src="Django%20Bootstrap%20App_files/bootstrap.bundle.min.js"></script>
+  
+
+</div></div></div></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
