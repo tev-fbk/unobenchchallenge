@@ -165,10 +165,10 @@ If you use UnoBench or participate in the challenge, please cite:
 
 ```bibtex
 @inproceedings{jiao2026obstruction,
-  title = {Obstruction Reasoning for Robotic Grasping},
-  author = {Runyu Jiao and Matteo Bortolon and Francesco Giuliari and Alice Fasoli and Sergio Povoli and Guofeng Mei and Yiming Wang and Fabio Poiesi},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year = {2026}
+  title={Obstruction reasoning for robotic grasping},
+  author={Jiao, Runyu and Bortolon, Matteo and Giuliari, Francesco and Fasoli, Alice and Povoli, Sergio and Mei, Guofeng and Wang, Yiming and Poiesi, Fabio},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026}
 }
 ```
 
