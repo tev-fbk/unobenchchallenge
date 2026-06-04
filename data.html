@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UnoBench Data Tutorial</title>
+    <title>UNOBench Data Tutorial</title>
 
     <link href="Django%20Bootstrap%20App_files/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -206,7 +206,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold text-primary" href="https://unochallenge.nnrex.org/">UnoBench Challenge</a>
+        <a class="navbar-brand fw-bold text-primary" href="https://unochallenge.nnrex.org/">UNOBench Challenge</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -228,10 +228,10 @@
     <main class="container justify-content-center u-non-blurred">
       <div class="col-lg central-card">
         <header class="mb-4">
-          <div class="page-kicker">UnoBench tutorial</div>
+          <div class="page-kicker">UNOBench tutorial</div>
           <h1 class="display-6 fw-bold mb-3">Data, starter kit, and baseline reproduction</h1>
           <p class="lead lead-copy">
-            This page is a compact guide for getting started with UnoBench. It explains which
+            This page is a compact guide for getting started with UNOBench. It explains which
             repository to use for each task and links to the detailed documentation maintained in
             the method, challenge, and dataset repositories.
           </p>
@@ -241,15 +241,15 @@
           <div class="col-12 col-md-4">
             <div class="resource-card">
               <span class="badge badge-soft rounded-pill mb-2">Dataset</span>
-              <h3>UnoBench on Hugging Face</h3>
+              <h3>UNOBench on Hugging Face</h3>
               <p>Download RGB images, Set-of-Mark images, annotations, challenge queries, and metadata.</p>
-              <a class="fw-semibold" href="https://huggingface.co/datasets/FBK-TeV/UnoBench">Open dataset README</a>
+              <a class="fw-semibold" href="https://huggingface.co/datasets/FBK-TeV/UNOBench">Open dataset README</a>
             </div>
           </div>
           <div class="col-12 col-md-4">
             <div class="resource-card">
               <span class="badge badge-soft rounded-pill mb-2">Starter kit</span>
-              <h3>UnoBench Challenge example</h3>
+              <h3>UNOBench Challenge example</h3>
               <p>Use the minimal runnable examples to verify query files, prediction format, and local evaluators.</p>
               <a class="fw-semibold" href="https://github.com/tev-fbk/unobenchchallenge">Open challenge README</a>
             </div>
@@ -277,9 +277,9 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Download or inspect UnoBench files and metadata.</td>
+                  <td>Download or inspect UNOBench files and metadata.</td>
                   <td>Hugging Face dataset repo</td>
-                  <td><a href="https://huggingface.co/datasets/FBK-TeV/UnoBench#dataset-structure">Dataset structure</a></td>
+                  <td><a href="https://huggingface.co/datasets/FBK-TeV/UNOBench#dataset-structure">Dataset structure</a></td>
                 </tr>
                 <tr>
                   <td>Check challenge input and output format before submitting.</td>
@@ -304,16 +304,16 @@
               Start from the Hugging Face dataset repo. It contains the full file list,
               download commands, archive extraction instructions, and metadata descriptions.
             </p>
-            <pre><code>hf download FBK-TeV/UnoBench \
+            <pre><code>hf download FBK-TeV/UNOBench \
   --repo-type dataset \
-  --local-dir ./UnoBench/UnoBenchSyn</code></pre>
-            <a href="https://huggingface.co/datasets/FBK-TeV/UnoBench#download">See full download instructions</a>
+  --local-dir ./UNOBench/UNOBenchSyn</code></pre>
+            <a href="https://huggingface.co/datasets/FBK-TeV/UNOBench#download">See full download instructions</a>
           </div>
 
           <div class="tutorial-step">
             <h3><span class="step-number">2</span>Choose an evaluation setting</h3>
             <p>
-              UnoBench supports a Set-of-Mark setting and a natural-language setting. Use the
+              UNOBench supports a Set-of-Mark setting and a natural-language setting. Use the
               challenge starter kit to understand the exact query and prediction formats.
             </p>
             <div class="table-responsive">
@@ -369,7 +369,7 @@
             <div class="col-12 col-md-4">
               <div class="sample-panel">
                 <h3 class="h6 fw-bold">RGB / NLP input</h3>
-                <img src="Django%20Bootstrap%20App_files/image_000578_easy.37b72ec801b2.png" alt="UnoBench RGB example">
+                <img src="Django%20Bootstrap%20App_files/image_000578_easy.37b72ec801b2.png" alt="UNOBench RGB example">
                 <div class="sample-facts">
                   <div class="sample-fact">
                     <span class="sample-fact-label">Query object</span>
@@ -389,7 +389,7 @@
             <div class="col-12 col-md-4">
               <div class="sample-panel">
                 <h3 class="h6 fw-bold">Set-of-Mark input</h3>
-                <img src="Django%20Bootstrap%20App_files/image_000578_easy_som.8cfd4ae34c81.png" alt="UnoBench Set-of-Mark example">
+                <img src="Django%20Bootstrap%20App_files/image_000578_easy_som.8cfd4ae34c81.png" alt="UNOBench Set-of-Mark example">
                 <div class="sample-facts">
                   <div class="sample-fact">
                     <span class="sample-fact-label">Query object ID</span>
@@ -434,11 +434,11 @@
         <section class="section-band">
           <h2 class="h4 fw-bold">Adapting Metadata to Your Method</h2>
           <p class="lead-copy">
-            You can use the provided <a href="https://huggingface.co/datasets/FBK-TeV/UnoBench/blob/main/meta_data/Synthetic_train.json">UnoBench metadata</a> to generate datasets tailored to your own method.
+            You can use the provided <a href="https://huggingface.co/datasets/FBK-TeV/UNOBench/blob/main/meta_data/Synthetic_train.json">UNOBench metadata</a> to generate datasets tailored to your own method.
             For example, UnoGrasp uses
             <a href="https://github.com/tev-fbk/UnoGrasp/blob/main/data_gen/data_gen_som_occ.py">a prompt-generation script</a>
-            to convert UnoBench metadata into
-            <a href="https://huggingface.co/datasets/FBK-TeV/UnoBench/blob/main/test_som_small.jsonl">VQA-style data</a>
+            to convert UNOBench metadata into
+            <a href="https://huggingface.co/datasets/FBK-TeV/UNOBench/blob/main/test_som_small.jsonl">VQA-style data</a>
             with human instruction prompts and the UnoGrasp system prompt for training and evaluation.
           </p>
         </section>
