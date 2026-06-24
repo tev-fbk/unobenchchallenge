@@ -6,7 +6,7 @@ This branch provides a **minimal runnable starter kit** for the **UnoBench Chall
 
 | Resource | Link | Description |
 | --- | --- | --- |
-| Challenge website | [UnoBench Challenge]([https://unochallenge.nnrex.org/](https://unobenchchallenge.fbk.eu/)) | Official challenge information and leaderboard. |
+| Challenge website | [UnoBench Challenge](https://unobenchchallenge.fbk.eu/) | Official challenge information and leaderboard. |
 | Full dataset | [Hugging Face](https://huggingface.co/datasets/FBK-TeV/UnoBench) | Full UnoBench files, including challenge query files. |
 | Method code | [GitHub main branch](https://github.com/tev-fbk/UnoGrasp) | UnoGrasp reproduction and evaluation code. |
 
